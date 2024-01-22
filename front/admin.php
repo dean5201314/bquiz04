@@ -16,7 +16,7 @@
             $a=rand(10,99);
             $b=rand(10,99);
             $_SESSION['ans']=$a+$b;
-            echo $a . " + " .$b . " ="
+            echo $a . " + " .$b . " =";
             ?>
             <input type="text" name="chk" id="chk"></td>
     </tr>
