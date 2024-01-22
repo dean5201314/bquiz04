@@ -49,7 +49,7 @@
             ?>
         </div>
         <div id="bottom" style="line-height:70px;background:url(icon/bot.png); color:#FFF;" class="ct">
-           <?=$Bottom->find(1)['bottom'];?></div>
+            頁尾版權 : </div>
     </div>
     <script src="./js/jquery-3.4.1.min.js"></script>
 </body>
