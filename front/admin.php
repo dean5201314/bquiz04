@@ -1,7 +1,4 @@
-<h2>第一次購買</h2>
-<img src="./icon/0413.jpg" onclick="location.href='?do=reg'">
-
-<h2>會員登入</h2>
+<h2>管理員登入</h2>
 <!-- table.all>tr*3>td.tt.ct+td.pp>input:text -->
 <table class="all">
     <tr>
