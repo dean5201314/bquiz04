@@ -3,7 +3,7 @@ date_default_timezone_set("Asia/Taipei");
 session_start();
 class DB{
 
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db15";
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db03";
     protected $pdo;
     protected $table;
     
@@ -142,7 +142,7 @@ function to($url){
 }
 
 
-
+$Bottom=new DB('bottom');
 
 
 ?>
