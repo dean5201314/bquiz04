@@ -11,33 +11,20 @@
 </div>
 <!-- table.all>(tr.tt>td+td.ct>button*2)+(tr.tt.ct>td*2) -->
 <table class="all">
-<?php
-$bigs=$Type->all(['big_id'=>0]);
-foreach($bigs as $big){
-?>
     <tr class="tt">
-        <td><?=$big['name'];?></td>
+        <td>流行皮件</td>
         <td class="ct">
-            <button onclick="edit(this,<?=$big['id'];?>)">修改</button>
-            <button onclick="del('type',<?=$big['id'];?>)">刪除</button>
+            <button>修改</button>
+            <button>刪除</button>
         </td>
     </tr>
-<?php
-    $mids=$Type->all(['big_id'=>$big['id']]);
-    foreach($mids as $mid){
-    ?>
-        <tr class="pp ct">
-            <td><?=$mid['name'];?></td>
-            <td>
-                <button onclick="edit(this,<?=$mid['id'];?>)">修改</button>
-                <button onclick="del('type',<?=$mid['id'];?>)">刪除</button>            
-            </td>
-        </tr>    
-    <?php
-    }
-}
-?>    
-
+    <tr class="pp ct">
+        <td>女用皮件</td>
+        <td>
+            <button>修改</button>
+            <button>刪除</button>            
+        </td>
+    </tr>
 </table>
 <script>
 getTypes(0)
