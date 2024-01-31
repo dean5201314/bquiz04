@@ -8,7 +8,6 @@
 
     <title>┌精品電子商務網站」</title>
     <link href="./css/css.css" rel="stylesheet" type="text/css">
-    <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/js.js"></script>
 </head>
 
@@ -75,6 +74,7 @@
         <div id="bottom" style="line-height:70px;background:url(icon/bot.png); color:#FFF;" class="ct">
            <?=$Bottom->find(1)['bottom'];?></div>
     </div>
+    <script src="./js/jquery-3.4.1.min.js"></script>
 </body>
 
 </html>
