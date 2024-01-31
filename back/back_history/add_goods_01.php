@@ -35,7 +35,7 @@
         </tr>
         <tr>
             <th class="tt ct">商品圖片</th>
-            <td class="pp"><input type="file" name="img" value=""></td>
+            <td class="pp"><input type="text" name="img" value=""></td>
         </tr>
         <tr>
             <th class="tt ct">商品介紹</th>
@@ -48,25 +48,3 @@
         <input type="button" value="返回">
     </div>
 </form>
-
-<script>
-getTypes('big',0)
-
-$("#big").on("change",function(){
-    getTypes('mid',$("#big").val())
-})
-
-function getTypes(type,big_id){
-    $.get("./api/get_types.php",{big_id},(types)=>{
-        switch(type){
-            case 'big':
-                $("#big").html(types)
-                getTypes('mid',$("#big").val())
-            break;
-            case 'mid':
-                $("#mid").html(types)
-            break;
-        }
-    })
-}
-</script>
