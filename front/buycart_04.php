@@ -10,7 +10,7 @@ if(!isset($_SESSION['mem'])){
 
 echo "<h2 class='ct'>{$_SESSION['mem']}的購物車</h2>";
 
-if(empty($_SESSION['cart'])){
+if(!isset($_SESSION['cart'])){
     echo "<h2 class='ct'>購物車中尚無商品</h2>";
 }
 
@@ -36,7 +36,7 @@ foreach($_SESSION['cart'] as $id => $qt){
         <td><?=$goods['stock'];?></td>
         <td><?=$goods['price'];?></td>
         <td><?=$goods['price'] * $qt;?></td>
-        <td><img src="./icon/0415.jpg" onclick="delCart(<?=$id;?>)"></td>
+        <td><img src="./icon/0415.jpg" alt=""></td>
     </tr>
 <?php
 }
@@ -47,10 +47,4 @@ foreach($_SESSION['cart'] as $id => $qt){
     <img src="./icon/0412.jpg" alt="">
 </div>
 
-<script>
-function delCart(id){
-    $.post("./api/del_cart.php",{id},()=>{
-        location.href="?do=buycart";
-    })
-}
-</script>
+
