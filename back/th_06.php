@@ -103,20 +103,12 @@ function addType(type){
         <td><?=($good['sh']==1)?"上架":"下架";?></td>
         <td style="width:120px">
             <button>修改</button>
-            <button onclick="del('goods',<?=$good['id'];?>)">刪除</button>
-            <button onclick="sh(1,<?=$good['id'];?>)">上架</button>
-            <button onclick="sh(0,<?=$good['id'];?>)">下架</button>
+            <button>刪除</button>
+            <button>上架</button>
+            <button>下架</button>
         </td>
     </tr>
     <?php
     }
     ?>
 </table>
-<script>
-
-function sh(sh,id){
-    $.post("./api/sh.php",{id,sh},()=>{
-        location.reload();
-    })
-}
-</script>
