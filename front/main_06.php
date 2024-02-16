@@ -55,16 +55,11 @@ foreach($goods as $good){
 ?>
 <div class='item'>
  <div class="img">
-    <a href="?do=detail&id=<?=$good['id'];?>">
-        <img src="./img/<?=$good['img'];?>" style="width:80%;height:110px">
-    </a>
+    <img src="./img/<?=$good['img'];?>" style="width:80%;height:110px">
  </div>
  <div class="info">
     <div class='ct tt'><?=$good['name'];?></div>
-    <div>
-        價錢：<?=$good['price'];?>
-        <img src="./icon/0402.jpg" style="float:right">
-    </div>
+    <div>價錢：<?=$good['price'];?></div>
     <div>規格：<?=$good['spec'];?></div>
     <div>簡介：<?=mb_substr($good['intro'],0,25);?>...</div>
  </div>   
