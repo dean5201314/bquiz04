@@ -53,20 +53,20 @@
         </div>
         <div id="left" class="ct">
             <div style="min-height:400px;">
-            <a href='?type=0'>全部商品(<?=$Goods->count(['sh'=>1]);?>)</a>
+            <a>全部商品(<?=$Goods->count(['sh'=>1]);?>)</a>
             <?php
             $bigs=$Type->all(['big_id'=>0]);
             foreach($bigs as $big){
             ?>
             <div class="ww">
-                <a href="?type=<?=$big['id'];?>"><?=$big['name'];?>(<?=$Goods->count(['sh'=>1,'big'=>$big['id']]);?>)</a>
+                <a href=""><?=$big['name'];?>(<?=$Goods->count(['sh'=>1,'big'=>$big['id']]);?>)</a>
                 <div class="s">
                     <?php
                     if($Type->count(["big_id"=>$big['id']])>0){
                         $mids=$Type->all(["big_id"=>$big['id']]);
                         foreach($mids as $mid){
                     ?>
-                        <a href="?type=<?=$mid['id'];?>"><?=$mid['name'];?>(<?=$Goods->count(['sh'=>1,'mid'=>$mid['id']])?>)</a>
+                        <a href=""><?=$mid['name'];?>(<?=$Goods->count(['sh'=>1,'mid'=>$mid['id']])?>)</a>
                     <?php
                         }
                     }
