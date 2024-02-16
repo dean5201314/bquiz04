@@ -22,19 +22,7 @@ if($type==0){
 
 <?php
 foreach($goods as $good){
-?>
-<div class='item'>
- <div class="img">
-    <img src="./img/<?=$good['img'];?>" style="width:200px;height:150px">
- </div>
- <div class="info">
-    <div class='ct tt'><?=$good['name'];?></div>
-    <div>價錢：<?=$good['price'];?></div>
-    <div>規格：<?=$good['spec'];?></div>
-    <div>簡介：<?=$good['intro'];?></div>
- </div>   
-</div>
-
-<?php
+    echo $good['name'];
+    echo "<br>";
 }
 ?>
