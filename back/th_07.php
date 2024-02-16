@@ -102,7 +102,7 @@ function addType(type){
         <td><?=$good['stock'];?></td>
         <td><?=($good['sh']==1)?"上架":"下架";?></td>
         <td style="width:120px">
-            <button onclick="location.href='?do=edit_goods&id=<?=$good['id'];?>'">修改</button>
+            <button>修改</button>
             <button onclick="del('goods',<?=$good['id'];?>)">刪除</button>
             <button onclick="sh(1,<?=$good['id'];?>)">上架</button>
             <button onclick="sh(0,<?=$good['id'];?>)">下架</button>
