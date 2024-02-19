@@ -23,15 +23,7 @@
                 <a href="?">回首頁</a> |
                 <a href="?do=news">最新消息</a> |
                 <a href="?do=look">購物流程</a> |
-                <a href="?do=buycart">購物車(
-                    <span id='amount'>
-                    <?php if(isset($_SESSION['cart']) && count($_SESSION['cart'])>0){
-                        echo count($_SESSION['cart']);
-                    }else{
-                        echo 0;
-                    }
-                    ?>
-                    </span>)</a> |
+                <a href="?do=buycart">購物車</a> |
                 <?php
                 if(isset($_SESSION['mem'])){
                 ?>

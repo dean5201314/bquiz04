@@ -12,8 +12,7 @@ echo "<h2 class='ct'>{$_SESSION['mem']}的購物車</h2>";
 
 if(empty($_SESSION['cart'])){
     echo "<h2 class='ct'>購物車中尚無商品</h2>";
-   
-}else{
+}
 
 ?>
 <table class="all">
@@ -55,6 +54,3 @@ function delCart(id){
     })
 }
 </script>
-<?php
-}
-?>
