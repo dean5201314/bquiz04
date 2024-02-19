@@ -55,7 +55,7 @@ foreach($_SESSION['cart'] as $id => $qt){
 </table>
 <div class="all ct tt">總價:<?=$sum;?>元</div>
 <div class="ct">
-    <input type="hidden" name="total" value="<?=$sum;?>">
+    <input type="hidden" name="id" value="<?=$row['id'];?>">
     <input type="submit" value="確定送出">
     <input type="button" value="返回修改訂單" onclick="location.href='?do=buycart'">
 </div>
