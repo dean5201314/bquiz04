@@ -15,23 +15,19 @@
     <tr>
         <td class="tt">驗證碼</td>
         <td class="pp">
-
-            <input type="text" name="ans" id="ans"><br>
-            <img src="" id="captcha"><button onclick="captcha()">重新產生</button>
-            </td>
+            <?php
+            $a=rand(10,99);
+            $b=rand(10,99);
+            $_SESSION['ans']=$a+$b;
+            echo $a . " + " .$b . " =";
+            ?>
+            <input type="text" name="ans" id="ans"></td>
     </tr>
 </table>
 <div class="ct">
     <button onclick="login('mem')">確認</button>
 </div>
 <script>
-captcha();
-
-function captcha(){
-    $.get("./api/captcha.php",(img)=>{
-        $("#captcha").attr("src",img)
-    })
-}    
 function login(table){
     $.get('./api/chk_ans.php',{ans:$("#ans").val()},(chk)=>{
         if(parseInt(chk)==0){
